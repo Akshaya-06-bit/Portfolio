@@ -1,0 +1,158 @@
+/* =========================================================
+   ADDITIONS - paste at the very BOTTOM of your style.css
+========================================================= */
+
+/* Sections that shouldn't stretch to full screen height */
+.section-auto {
+    min-height: auto;
+}
+
+/* "Live demo coming soon" text (replaces the old # link) */
+.link-soon {
+    font-size: 12px;
+    color: #777777;
+}
+
+
+/* =========================================================
+   ACHIEVEMENTS
+========================================================= */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+}
+
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    padding: 28px 24px;
+
+    background: #ffffff;
+    border: 1px solid #dededb;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+a.stat-card:hover {
+    transform: translateY(-4px);
+    border-color: #c4c4c0;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+.stat-card strong {
+    font-size: 34px;
+    letter-spacing: -1px;
+}
+
+.stat-card span {
+    font-size: 12px;
+    color: #777777;
+    line-height: 1.5;
+}
+
+.profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 28px;
+}
+
+.profile-links a {
+    font-size: 12px;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: border-color 0.2s ease;
+}
+
+.profile-links a:hover {
+    border-color: #111111;
+}
+
+.achievement-subheading {
+    margin: 60px 0 20px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   LEADERSHIP
+========================================================= */
+
+.leadership-card {
+    max-width: 1000px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+
+    padding: 35px;
+
+    background: #ffffff;
+    border: 1px solid #dededb;
+}
+
+.leadership-card h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.leadership-card p {
+    color: #777777;
+    font-size: 14px;
+}
+
+.leadership-card .leadership-text {
+    margin-top: 14px;
+    max-width: 700px;
+    color: #444444;
+    line-height: 1.9;
+}
+
+.leadership-date {
+    flex-shrink: 0;
+    font-size: 12px;
+    color: #999999;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   RESPONSIVE ADDITIONS
+========================================================= */
+
+@media (max-width: 1100px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 20px 16px;
+    }
+
+    .stat-card strong {
+        font-size: 28px;
+    }
+
+    .leadership-card {
+        flex-direction: column;
+        padding: 25px;
+        gap: 15px;
+    }
+}
